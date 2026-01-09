@@ -9,7 +9,7 @@ class Command(BaseCommand):
         self.stdout.write("Waiting for database...")
 
         db_conn = None
-        while not db_conn:
+        while True:
             try:
                 db_conn = connections["default"]
                 db_conn.cursor()
